@@ -7,6 +7,7 @@ var fs = require('fs')
   
 argv.shift();
 
+console.log('docto')
 
 // opt simple parser
 for(var i in argv){
