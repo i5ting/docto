@@ -10,7 +10,7 @@ npm install -g docto
 ## Usages
 
 ```
-docto project_name user_name
+docto i5ting/docto
 ```
 
 ## Test
@@ -36,4 +36,6 @@ npm link
 
 copy完成后
 
-- 向github
+- 向gitignore增加
+  - preview目录
+  - node_modules木

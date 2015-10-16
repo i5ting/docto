@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm publish .",
-    "test": "DEBUG=docto docto sang"
+    "test": "DEBUG=docto docto sang",
+    "doc": "gulp"
   },
   "preferGlobal": "true",
   "bin": {
@@ -13,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/i5ting/i5ting_doc.git"
+    "url": "git+https://github.com/i5ting/docto.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/i5ting/i5ting_doc/issues"
+    "url": "https://github.com/i5ting/docto/issues"
   },
-  "homepage": "https://github.com/i5ting/i5ting_doc#readme",
+  "homepage": "https://github.com/i5ting/docto#readme",
   "dependencies": {
     "commander": "^2.9.0",
     "gulp": "^3.8.10",
@@ -28,6 +29,7 @@
     "gulp-open": "^0.3.1",
     "gulp-rename": "^1.2.0",
     "handlebars": "^4.0.3",
+    "i5ting_toc": "^1.1.2",
     "shelljs": "^0.5.3",
     "tpl_apply": "^1.0.3",
     "yargs": "^3.27.0"
