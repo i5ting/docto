@@ -1,0 +1,29 @@
+{
+  "name": "docto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm publish .",
+    "test": "DEBUG=docto docto sang"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "docto": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/i5ting_doc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/i5ting_doc/issues"
+  },
+  "homepage": "https://github.com/i5ting/i5ting_doc#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "shelljs": "^0.5.3",
+    "yargs": "^3.27.0"
+  }
+}
