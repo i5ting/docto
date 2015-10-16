@@ -17,6 +17,7 @@ gulp.task('rename',function () {
 	}	
 });
 
+// 使用i5ting_toc直接生成，不再使用shell
 gulp.task('generate',function () {
 	// Run external tool synchronously
 	if (exec('sh ./generate.sh').code !== 0) {
