@@ -1,57 +1,27 @@
-# kp
+# {{project}}
 
-kp is a tool for kill process by server port. only use for mac && linux
+{{project}} is a node module for xxx.
 
-[![npm version](https://badge.fury.io/js/kp.svg)](http://badge.fury.io/js/kp)
+[![npm version](https://badge.fury.io/js/{{project}}.svg)](http://badge.fury.io/js/{{project}})
 
 ## Install
 
-    [sudo]npm install -g kp
+    [sudo]npm install -g {{project}}
 
 ## Usage 
 
-default server port is 3000
-
 ```
-kp
-```
-
-or kill by some port
-
-
-```
-kp 3002
-```
-
-or with sudo 
-
-```
-kp 3002 -s or kp 3002 --sudo
+{{project}}
 ```
 
 ## Code
 
-kill by some port
-
 ```
   #!/usr/bin/env node
 
-  var kp = require("kp");
-  kp(3980);
+  var {{project}} = require("{{project}}");
+  {{project}}();
 ```
-
-or
-
-kill by some port with sudo
-
-```
-  #!/usr/bin/env node
-
-  var kp = require("kp");
-  kp(3980, 'sudo');
-```
-
-
 
 ## Contributing
 
@@ -63,12 +33,11 @@ kill by some port with sudo
 
 ## 版本历史
 
-- v1.1.0 实现可编程调用
-- v1.0.0 初始化版本cli,实现kp导出
+- v1.0.0 初始化版本
 
 ## 欢迎fork和反馈
 
-- write by `i5ting` shiren1118@126.com
+- write by `{{user}}` {{user}}@126.com
 
 如有建议或意见，请在issue提问或邮件
 

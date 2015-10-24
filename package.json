@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/i5ting/docto#readme",
   "dependencies": {
-    "ccli": "^1.0.3",
+    "ccli": "^1.0.7",
     "gulp": "^3.8.10",
     "gulp-gh-pages": "^0.4.0",
     "gulp-open": "^0.3.1",
@@ -31,6 +31,6 @@
     "handlebars": "^4.0.3",
     "i5ting_toc": "^1.1.2",
     "shelljs": "^0.5.3",
-    "tpl_apply": "^1.0.3",
+    "tpl_apply": "^1.0.3"
   }
 }
