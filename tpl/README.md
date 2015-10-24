@@ -1,8 +1,14 @@
 # {{project}}
 
-{{project}} is a node module for xxx.
 
-[![npm version](https://badge.fury.io/js/{{project}}.svg)](http://badge.fury.io/js/{{project}})
+Artwork by [{{user}}](http://www.github.com/{{user}}/).
+
+[![Deps](https://david-dm.org/{{user}}/{{project}}.svg)](https://david-dm.org/{{user}}/{{project}}) 
+[![npm](https://img.shields.io/npm/v/{{project}}.svg)](https://www.npmjs.com/package/{{project}})
+[![Build](https://travis-ci.org/{{user}}/{{project}}.svg)](https://travis-ci.org/{{user}}/{{project}})
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/{{user}}/{{project}}/master/LICENSE.md)
+[![npm](https://img.shields.io/npm/dt/{{project}}.svg)](https://www.npmjs.com/package/{{project}})
+
 
 ## Install
 
