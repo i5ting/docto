@@ -1,6 +1,6 @@
 {
   "name": "docto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "doc tool",
   "main": "index.js",
   "scripts": {
