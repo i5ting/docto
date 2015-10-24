@@ -1,7 +1,7 @@
 {
   "name": "docto",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "doc tool",
   "main": "index.js",
   "scripts": {
     "start": "npm publish .",
