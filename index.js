@@ -31,7 +31,7 @@ function copy() {
 
 function link() {
   console.log(ccli.cp )
-  ccli.linkfolder(ccli.fp + '/' + 'node_modules/', ccli.cp + '/' +'node_modules/')
+  ccli.linkfolder('node_modules/','node_modules/');
 }
 
 main()
