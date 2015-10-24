@@ -24,7 +24,7 @@ gulp.task('copy_img',function () {
 
 // 使用i5ting_toc直接生成，不再使用shell
 // copy img到preview下面
-gulp.task('doc', ['copy_img'],function () {
+gulp.task('generate', ['copy_img', 'rename'],function () {
   var is_open = true;
   var markd_config = {
   	debug: false
@@ -46,10 +46,10 @@ gulp.task('doc', ['copy_img'],function () {
   require('i5ting_toc')(pwd, source_file_name, dest_file_path, is_open, markd_config);
 });
 
-gulp.task('show',['doc'] ,function () {
+gulp.task('show',['generate'] ,function () {
   console.log('show');
 });
 
-gulp.task('default',['doc', 'rename', 'deploy'] ,function () {
+gulp.task('default',['generate', 'deploy'] ,function () {
   console.log('default');
 });
