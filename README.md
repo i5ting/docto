@@ -4,6 +4,7 @@ docto is a Doc Tool for Generate README.md with Toc and Push it to Git Pages
 
 [![npm version](https://badge.fury.io/js/docto.svg)](http://badge.fury.io/js/docto)
 
+![](img/1.png)
 ## Features
 
 - 基于nodejs写的，安装简单
