@@ -6,12 +6,12 @@ require('shelljs/global');
 
 var options = {}
 gulp.task('deploy', function () {
-    return gulp.src('./preview/**/*')
-        .pipe(gp_deploy(options));
+  return gulp.src('./preview/**/*')
+    .pipe(gp_deploy(options));
 });
 
 gulp.task('rename',function () {
-	if (exec('cp ./preview/README.html ./preview/index.html').code !== 0) {
+  if (exec('cp ./preview/README.html ./preview/index.html').code !== 0) {
 	  echo('Error: rename exec failed');
 	  exit(1);
 	}	
@@ -19,7 +19,7 @@ gulp.task('rename',function () {
 
 gulp.task('copy_img',function () {
   return gulp.src('./img/**/*')
-      .pipe(gulp.dest('./preview/img'));
+    .pipe(gulp.dest('./preview/img'));
 });
 
 // 使用i5ting_toc直接生成，不再使用shell
@@ -29,6 +29,7 @@ gulp.task('doc', ['copy_img'],function () {
   var markd_config = {
   	debug: false
   }
+  
   //函数可以返回当前正在执行的项目路径
   var pwd = process.cwd()  
   var source_file = "README.md"
@@ -46,9 +47,9 @@ gulp.task('doc', ['copy_img'],function () {
 });
 
 gulp.task('show',['doc'] ,function () {
-    console.log('show');
+  console.log('show');
 });
 
-gulp.task('default',['generate', 'rename', 'deploy'] ,function () {
-    console.log('default');
+gulp.task('default',['doc', 'rename', 'deploy'] ,function () {
+  console.log('default');
 });

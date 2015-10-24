@@ -1,5 +1,15 @@
 # docto
 
+docto is a Doc Tool for Generate README.md with Toc and Push it to Git Pages
+
+[![npm version](https://badge.fury.io/js/docto.svg)](http://badge.fury.io/js/docto)
+
+## Features
+
+- 初始化README.md
+- 初始化gulp和依赖模块
+- `gulp doc`把README.md编译成带有toc的preview/index.html(注意资源文件放到img下面)
+- `gulp`直接生成html，并push到github的gh-pages分支
 
 ## Install 
 
@@ -34,6 +44,63 @@ docto docto
 docto
 ```
 
+## 实例
+
+- 文档 http://i5ting.github.io/docto-example
+- 代码 https://github.com/i5ting/docto-example
+
+### 初始化git仓库
+```
+git clone git@github.com:i5ting/docto-example.git
+```
+
+### 创建README.md
+
+```
+docto i5ting/docto-example
+```
+
+### 查看gulp的tasks
+
+```
+➜  docto-example git:(master) ✗ gulp -T
+[20:56:41] Using gulpfile ~/workspace/github/docto-example/gulpfile.js
+[20:56:41] Tasks for ~/workspace/github/docto-example/gulpfile.js
+[20:56:41] ├── deploy
+[20:56:41] ├── rename
+[20:56:41] ├── copy_img
+[20:56:41] ├─┬ doc
+[20:56:41] │ └── copy_img
+[20:56:41] ├─┬ show
+[20:56:41] │ └── doc
+[20:56:41] └─┬ default
+[20:56:41]   ├── doc
+[20:56:41]   ├── rename
+[20:56:41]   └── deploy
+```
+
+### 生成文档
+
+```
+gulp doc
+```
+
+### 推送到git pages
+
+```
+gulp deploy
+```
+
+### 默认任务
+
+```
+gulp
+```
+
+- 编译README.md为preview/README.html
+- 修改preview/README.html为preview/index.html
+- 推送到git pages
+
 ## Test
 
 test cli with 
@@ -43,20 +110,26 @@ test cli with
 npm link
 ```
 
-## TODO
 
-- [x] 编写命令行工具
-- [x] 在当前目录执行，copy模块安装目录的模板到当前目录
-- [x] 将模块依赖的模块以软连接的形式创建到当前目录的node_module下面
+## Contributing
 
-模板生成
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
-- [x] 生成README.md()
-- [x] copy gulpfile.js
-- [x] 创建依赖
+## 版本历史
 
-copy完成后
+- v1.0.0 初始化版本
 
-- 向gitignore增加
-  - preview目录
-  - node_modules
+## 欢迎fork和反馈
+
+- write by `i5ting` i5ting@126.com
+
+如有建议或意见，请在issue提问或邮件
+
+## License
+
+this repo is released under the [MIT
+License](http://www.opensource.org/licenses/MIT).

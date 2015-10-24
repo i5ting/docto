@@ -16,8 +16,8 @@ var project = project_name[1];
 console.log(user);
 console.log(project);
 
-function copy() {
-  var files_arr = ['tpl/README.md','tpl/generate.sh','tpl/gulpfile.js']
+function copy () {
+  var files_arr = ['tpl/README.md', 'tpl/gulpfile.js']
   
   files_arr.forEach(function(file){
     var d = ccli.cp + '/' + file.split('/').pop()
@@ -29,16 +29,14 @@ function copy() {
   
 }
 
-function link() {
+function link () {
   console.log(ccli.cp )
   ccli.linkfolder('node_modules/','node_modules/');
 }
 
-main()
-
-function main(){
-
+function main (){
   copy() 
   link();
-  
 }
+
+main();
