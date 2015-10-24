@@ -6,10 +6,13 @@ docto is a Doc Tool for Generate README.md with Toc and Push it to Git Pages
 
 ## Features
 
+- 基于nodejs写的，安装简单
+- 基于gulp构建，简单易用
+- 子项目里无需安装gulp和依赖模块，即可使用
 - 初始化README.md
-- 初始化gulp和依赖模块
-- `gulp doc`把README.md编译成带有toc的preview/index.html(注意资源文件放到img下面)
-- `gulp`直接生成html，并push到github的gh-pages分支
+- 自动编译成html
+- 自动有基于ztree的toc目录
+- 自动发布到git pages
 
 ## Install 
 
