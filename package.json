@@ -29,8 +29,6 @@
     "gulp-open": "^0.3.1",
     "gulp-rename": "^1.2.0",
     "handlebars": "^4.0.3",
-    "i5ting_toc": "^1.1.2",
-    "shelljs": "^0.5.3",
-    "tpl_apply": "^1.0.3"
+    "i5ting_toc": "^1.1.2"
   }
 }
