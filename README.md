@@ -5,6 +5,7 @@ docto is a Doc Tool for Generate README.md with Toc and Push it to Git Pages
 [![npm version](https://badge.fury.io/js/docto.svg)](http://badge.fury.io/js/docto)
 
 ![](img/1.png)
+
 ## Features
 
 - 基于nodejs写的，安装简单
@@ -23,13 +24,15 @@ npm install -g docto
 
 ## Usages
 
+如果当前不是git仓库，无法使用
+
 1）指定用户和项目
 
 ```
 docto i5ting/docto
 ```
 
-2）指定项目（无用户名）【todo】
+2）指定项目（无用户名）
 
 i5ting=git config --global user.name
 
@@ -37,7 +40,7 @@ i5ting=git config --global user.name
 docto docto
 ```
 
-3）无参数【todo】
+3）无参数
 
 如果当前是一个git仓库，直接读取
 
