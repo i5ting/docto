@@ -10,7 +10,7 @@ gulp.task('deploy', function () {
     .pipe(gp_deploy(options));
 });
 
-gulp.task('rename',function () {
+gulp.task('rename', function () {
   if (exec('cp ./preview/README.html ./preview/index.html').code !== 0) {
 	  echo('Error: rename exec failed');
 	  exit(1);
@@ -24,7 +24,7 @@ gulp.task('copy_img',function () {
 
 // 使用i5ting_toc直接生成，不再使用shell
 // copy img到preview下面
-gulp.task('generate', ['copy_img', 'rename'],function () {
+gulp.task('generate', ['copy_img'],function () {
   var is_open = true;
   var markd_config = {
   	debug: false
@@ -50,6 +50,6 @@ gulp.task('show',['generate'] ,function () {
   console.log('show');
 });
 
-gulp.task('default',['generate', 'deploy'] ,function () {
+gulp.task('default',['generate', 'rename', 'deploy'] ,function () {
   console.log('default');
 });

@@ -1,6 +1,6 @@
 {
   "name": "docto",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "docto is a Doc Tool for Generate README.md with Toc and Push it to Git Pages",
   "main": "index.js",
   "scripts": {
