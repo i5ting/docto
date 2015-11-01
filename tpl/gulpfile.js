@@ -5,8 +5,8 @@ var rename = require("gulp-rename");
 require('shelljs/global');
 
 var options = {}
-gulp.task('deploy', function () {
-  return gulp.src('./preview/**/*')
+gulp.task('deploy' ,function () {
+  gulp.src('./preview/**/*')
     .pipe(gp_deploy(options));
 });
 
@@ -17,11 +17,14 @@ gulp.task('rename', function () {
 	}	
 });
 
-gulp.task('copy_img',function () {
+gulp.task('copy_img', function () {
   return gulp.src('./img/**/*')
     .pipe(gulp.dest('./preview/img'));
 });
 
+gulp.task('g', ['generate'], function () {
+  
+});
 // 使用i5ting_toc直接生成，不再使用shell
 // copy img到preview下面
 gulp.task('generate', function () {
@@ -46,10 +49,15 @@ gulp.task('generate', function () {
   require('i5ting_toc')(pwd, source_file_name, dest_file_path, is_open, markd_config);
 });
 
-gulp.task('show',['generate','copy_img'] ,function () {
+gulp.task('show',['rename','copy_img'] ,function () {
   console.log('show');
 });
 
-gulp.task('default',['generate', 'copy_img', 'rename', 'deploy'] ,function () {
+var watcher = gulp.watch('preview/**/*', ['copy_img', 'rename', 'deploy']);
+watcher.on('change', function(event) {
+  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+});
+
+gulp.task('default',['generate','rename','copy_img'] ,function () {
   console.log('default');
 });
