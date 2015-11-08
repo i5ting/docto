@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var bump = require('gulp-bump');
 var gp_deploy = require('gulp-gh-pages');
 var open = require("gulp-open");
 var rename = require("gulp-rename");
@@ -66,6 +67,6 @@ gulp.task('default',['generate','rename','copy_img'] ,function () {
 // (or simply omit to keep the current formatting)
 gulp.task('bump', function(){
   gulp.src('./package.json')
-  .pipe(bump({type:'major', indent: 4 }))
+  .pipe(bump({type:'patch', indent: 4 }))
   .pipe(gulp.dest('./'));
 });
