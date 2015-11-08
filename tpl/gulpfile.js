@@ -61,3 +61,11 @@ watcher.on('change', function(event) {
 gulp.task('default',['generate','rename','copy_img'] ,function () {
   console.log('default');
 });
+
+// Override the tab size for indenting
+// (or simply omit to keep the current formatting)
+gulp.task('bump', function(){
+  gulp.src('./package.json')
+  .pipe(bump({type:'major', indent: 4 }))
+  .pipe(gulp.dest('./'));
+});
